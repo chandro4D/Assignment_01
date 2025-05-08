@@ -1,4 +1,4 @@
-//--------------------------------  Problem----01-----------------------------------
+
 function formatString(name:string, toUpper?:boolean):string {
     if(toUpper == true || toUpper == null){
         return name.toUpperCase();
@@ -7,11 +7,11 @@ function formatString(name:string, toUpper?:boolean):string {
         return name.toLowerCase();
     }
 }
-// console.log(formatString("chandra shekhor mondal"));
 
-//--------------------------------  Problem----02-----------------------------------
-// Description: Create a function that filters an array of objects by the rating property, 
-// returning only items with a rating of 4 or more.
+
+
+
+
 
 const books = [
     { title: "Book A", rating: 4.5 },
@@ -30,21 +30,26 @@ function filterByRating(items: { title: string; rating: number }[]){
     }
     return result;
 }
-// console.log(filterByRating(books));
 
 
 
-//--------------------------------  Problem----03-----------------------------------
-// Description: Create a generic function that concatenates multiple arrays of the same type using rest parameters.
+
+
+
+
+
 function concatenateArrays<T>(...arrays: T[][]): T[]{
     return ([] as T[]).concat(...arrays);
 }
-// console.log(concatenateArrays<number>([1, 2], [3, 4], [5]));
-// console.log(concatenateArrays<string>(["a", "b"], ["c"]));
 
 
 
-//--------------------------------  Problem----04-----------------------------------
+
+
+
+
+
+
 class Vehicle {
     private make: string;
     private year: number;
@@ -72,11 +77,15 @@ class Vehicle {
     }
   }
   const myCar = new Car("Toyota", 2020, "Corolla");
-//   console.log(myCar.getInfo());   // Output: "Make: Toyota, Year: 2020"
-//   console.log(myCar.getModel());  // Output: "Model: Corolla"
+  myCar.getInfo();
+  myCar.getModel()
   
-//--------------------------------  Problem----05-----------------------------------
-// Description: Write a function that takes a string | number and returns:
+  
+
+
+
+
+
 
 function processValue(value: string | number): number{
     if(typeof value == "string"){
@@ -85,10 +94,15 @@ function processValue(value: string | number): number{
         return value*2;
     }
 }
-// console.log(processValue(5));
 
 
-//--------------------------------  Problem----06-----------------------------------
+
+
+
+
+
+
+
 interface Product {
     name: string;
     price: number;
@@ -114,9 +128,14 @@ interface Product {
     { name: "Notebook", price: 25 },
     { name: "Bag", price: 50 }
   ];
-//   console.log(getMostExpensiveProduct(products));
   
-//--------------------------------  Problem----07-----------------------------------
+
+
+
+
+
+
+
 enum Day {
     Monday,
     Tuesday,
@@ -126,7 +145,6 @@ enum Day {
     Saturday,
     Sunday
   }
-  
   function getDayType(day: Day): string {
     if (day === Day.Saturday || day === Day.Sunday) {
       return "Weekend";
@@ -134,11 +152,14 @@ enum Day {
       return "Weekday";
     }
   }
-//   console.log(getDayType(Day.Monday));
-//   console.log(getDayType(Day.Sunday));
-//   getDayType(Day.Monday);
-//   getDayType(Day.Sunday);  
-//--------------------------------  Problem----08-----------------------------------
+  
+  
+
+
+
+
+
+
 
 async function squareAsync(n: number): Promise<number> {
     if (n < 0) {
@@ -151,6 +172,4 @@ async function squareAsync(n: number): Promise<number> {
       }, 1000);
     });
   }
-  
-  squareAsync(4).then(console.log); 
-  
+  squareAsync(4).then(console.log);
